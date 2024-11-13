@@ -1,3 +1,4 @@
+---
 name: Lint Code Base
 
 on: [push, pull_request]
@@ -18,5 +19,6 @@ jobs:
         uses: github/super-linter@v4
         env:
           VALIDATE_ALL_CODEBASE: true
+          PYTHON_PYLINT_CONFIG_FILE: .pylintrc
           VALIDATE_JAVASCRIPT_ES: false
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

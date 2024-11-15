@@ -7,7 +7,7 @@ on:
 jobs:
   auto-approve:
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'Geeky-cat' }}
+    if: ${{ github.event.pull_request.user.login == 'Geeky-cat' }}
     
     steps:
 

@@ -7,7 +7,7 @@ on:
 jobs:
   auto-approve:
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'Geeky-cat' }}
+    if: ${{ github.actor == 'stazottest0' }}
     
     steps:
 
